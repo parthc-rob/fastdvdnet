@@ -11,6 +11,10 @@ Previous deep video denoising algorithm: [DVDnet](https://github.com/m-tassano/d
 This source code provides a PyTorch implementation of the FastDVDnet video denoising algorithm, as in 
 Tassano, Matias and Delon, Julie and Veit, Thomas. ["FastDVDnet: Towards Real-Time Deep Video Denoising Without Flow Estimation", arXiv preprint arXiv:1907.01361 (2019).](https://arxiv.org/abs/1907.01361)
 
+### Edits - Python 2.7 - ROS Melodic
+
+This branch adapts the repo to work with Python 2.7 with the goal of using this algorithm as a ROS node (there are compatibility issues between Python3 and ROS Melodic and earlier distros).
+
 ## Video Examples
 
 You can download several denoised sequences with our algorithm and other methods [here](https://www.dropbox.com/sh/m9mpz1m1b55x420/AAAt1wes43brv37BmBxw07jna?dl=0 "FastDVDnet denoised sequences") (more videos coming soon)

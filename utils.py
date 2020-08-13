@@ -15,7 +15,8 @@ import os
 import subprocess
 import glob
 import logging
-from random import choices # requires Python >= 3.6
+#from random import choices # requires Python >= 3.6
+from numpy.random import choice
 import numpy as np
 import cv2
 import torch
@@ -55,7 +56,8 @@ def normalize_augment(datain, ctrl_fr_idx):
 		aug_list = [do_nothing, flipud, rot90, rot90_flipud, \
 					rot180, rot180_flipud, rot270, rot270_flipud, add_csnt]
 		w_aug = [32, 12, 12, 12, 12, 12, 12, 12, 12] # one fourth chances to do_nothing
-		transf = choices(aug_list, w_aug)
+		transf = choice(aug_list, 1, p=w_aug) # Python 2
+		# transf = choices(aug_list, w_aug) # Python >= 3.6
 
 		# transform all images in array
 		return transf[0](sample)
